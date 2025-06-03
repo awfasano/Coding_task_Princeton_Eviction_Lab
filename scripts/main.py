@@ -20,19 +20,17 @@ from pathlib import Path
 from collections import defaultdict
 from typing import Callable, List, Tuple, Any
 
-from scripts.helpers import ProposedChange, SplitEvent
+from helpers import ProposedChange, SplitEvent
 
 #Import rule functions engines
-from scripts.fuzzy_search import propose_street_name_corrections           # Rule 2
-from scripts.fill_missing_zip_codes import (
+from fuzzy_search import propose_street_name_corrections           # Rule 2
+from fill_missing_zip_codes import (
     propose_fill_missing_zips_keep,      # Rule 1
     propose_replace_invalid_zips,        # Rule 3a
     propose_fill_missing_zips_by_address # Rule 3b
 )
-from scripts.fuzzy_search_cities import propose_correct_city_names_by_zip  # Rule 4
+from fuzzy_search_cities import propose_correct_city_names_by_zip  # Rule 4
 from pandas import DataFrame
-
-from scripts.helpers import SplitEvent
 
 #  Search thresholds for easy modulation
 STREET_THRESHOLD = 0.10

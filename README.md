@@ -1,5 +1,6 @@
 # Quick start for mac/linux
 1. Clone / unzip the project
+
   git clone https://github.com/awfasano/Coding_task_Princeton_Eviction_Lab.git
 
   cd Coding_task_Princeton_Eviction_Lab/
